@@ -3,7 +3,6 @@
 % Decrease number of cycles to decrease run time
 %
 
-
 clc;
 clear;
 close all;
@@ -26,7 +25,6 @@ opts = setvaropts(opts, ["PartNo", "WorkCenterNo", "SequenceNo"], "EmptyFieldRul
 % Import the data
 Prod_tab = readtable("/MATLAB Drive/FFS_INPUT_FILE_2.xlsx", opts, "UseExcel", false);
 
-
 % Clear temporary variables
 clear opts
 
@@ -47,7 +45,6 @@ opts = setvaropts(opts, ["Var1", "Product"], "EmptyFieldRule", "auto");
 
 % Import the data
 Demand_tab = readtable("/MATLAB Drive/FFS_INPUT_FILE_2.xlsx", opts, "UseExcel", false);
-
 
 % Clear temporary variables
 clear opts
@@ -70,10 +67,8 @@ opts = setvaropts(opts, ["WorkCenterNo", "Description"], "EmptyFieldRule", "auto
 % Import the data
 Master_tab = readtable("/MATLAB Drive/FFS_INPUT_FILE_2.xlsx", opts, "UseExcel", false);
 
-
 % Clear temporary variables
 clear opts
-
 
 
 % Assuming Mean Downtime of 6 hours with a standard deviation of 0.5 hours
@@ -123,26 +118,18 @@ Index_TEST = find(strcmp(Master_tab.WorkCenterNo, "TESTING"));
 [Test_br_mean, Test_br_std, Test_stup] = deal(Master_tab.Avg_RunHrs_noBreakdown_(Index_TEST),...
     Master_tab.Std_DevForBreakdown(Index_TEST), Master_tab.SetupTime(Index_TEST));
 
-
+% x, y and z values to obtain the color Crimson 
 Crim = [0.68,0.03,0];
-
-
-
 
 %Product 1 -  124672 
 
 % Assuming Mean Downtime of 6 hours with a standard deviation of 0.5 hours
 % Breakdown
- 
 
 Part1_cyc_std = [Part1.Avg_Hours(:) Part1.Std_Dev_(:)];
 
 QA_std = 2;
 Shi_std = 0.75;
-
-% rec_cyc1 = normrnd(3.18,1); %Rec
-
-% QA_cyc2 = normrnd(5.79,QA_std); %QA Inspect
 
 [cnc_br3,~,cnc_stup3] = Cnc_horiz(CNC_br_mean,CNC_br_std,0,0,CNC_stup);
 
@@ -162,14 +149,8 @@ Shi_std = 0.75;
 
 [mk_br11, ~, mk_stup11] = Man_Key(MK_br_mean,MK_br_std,0,0,MK_stup);
 
-% QA_cyc12 = normrnd(9,QA_std);
-
 [dress_br13, ~, dress_stup13] = Dress(Dress_br_mean,Dress_br_std,0,0,...
     Dress_stup);
-
-% QA_cyc14 = normrnd(2.88,QA_std);
-
-% Assem_cyc15 = normrnd(4.44, 0.5);
 
 [dressbal_br16, ~, dressbal_stup16] = Dress_Bal(DB_br_mean,...
     DB_br_std,0,0,DB_stup);
@@ -177,14 +158,9 @@ Shi_std = 0.75;
 [dressbal_br17, ~, dressbal_stup17] = Dress_Bal(DB_br_mean, DB_br_std,...
     0,0,DB_stup);
 
-% QA_cyc18 = normrnd(4.54, QA_std);
-
-% Shi_cyc19 = normrnd(2.37, Shi_std);
-
 [temp_cnc3 ,temp_cnc4, temp_cnc5, temp_man6, temp_cnc7, temp_cnc8, temp_cnc9,...
     temp_mm10, temp_mk11, temp_dress13, temp_dressbal16, temp_dressbal17]...
     = deal(0);
-
 
 for i = 1:cycles
 
@@ -207,8 +183,7 @@ for i = 1:cycles
        end
 
    end
-
-      
+    
    if temp_cnc3 >= cnc_br3   %CNC3
 
        
@@ -3256,22 +3231,6 @@ DB8_57_fail = numel(ia_57_DB8);
 ia_57_Test9 = sort(ia_57_Test9,'ascend');
 Test9_57_fail = numel(ia_57_Test9);
 
-
-
-
-
-%%
-% 
-% for i = 1:60
-% 
-%     hold on;
-% 
-%     bar(Cycle_Time(1,:))
-% 
-%     hold off;
-% 
-% end
-
 figure();
 
 t_bar_names = categorical({'P 72','P 54','P 57','P 93'});
@@ -3286,11 +3245,6 @@ title("Average cycle time for each product line")
 ylabel('Time in hrs')
 
 
-
-
-%%
-
-
 Avg_cyc1 = mean(Cycle_Time);
 Avg_cyc2 = mean(Cycle_Time_54);
 Avg_cyc3 = mean(Cycle_Time_93);
@@ -3302,16 +3256,6 @@ x(2,1:16) = Avg_cyc2;
 x(3,1:11) = Avg_cyc3;
 x(4,1:11) = Avg_cyc4;
 
-
-%%
-
-%figure()
-
-%tiledlayout(2,2);
-
-%nexttile
-
-%%
 % Product 1
 
 figure();
@@ -3924,8 +3868,8 @@ text(xtips_cost,ytips_cost,labels_cost,'HorizontalAlignment','center',...
     'VerticalAlignment','bottom');
 
 
+%% Functions to generate breakdown times, cycle times and set up time of each machine
 
-%%
 function [Brk_dwn, Cyc_Time, Set_Up] = Cnc_horiz(Mean_br, Std_br, Avg_Time, Std_dev, Set_Up)
 
 
