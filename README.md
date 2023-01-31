@@ -1,4 +1,4 @@
-# Simulation of a manufactruring line
+# Simulation of manufactruring lines
 
 This is simulation was run on MATLAB.
 
