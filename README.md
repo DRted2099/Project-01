@@ -1,6 +1,6 @@
 # Simulation of manufactruring lines
 
-This is simulation was run on MATLAB.
+This is script was written in MATLAB.
 
 Change the path of the .xslx file to the path saved on your computer when running the code. Make changes to lines that are commented with "Import the data"
 The last section of the script consists of custom functions that generates breakdown time, cycle time and set-up time for each of the machines which is REQUIRED to run the model
