@@ -30,4 +30,3 @@ The code simulates the production lines of 4 parts. It also plots bar graphs of 
 6. Number of breakdowns of each machine
 7. Reliability of the whole line (series reliability)
 8. Cost comparision of each workstation
-
