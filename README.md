@@ -8,12 +8,14 @@ The last section of the script consists of custom functions that generates break
 All the data used in the code is extracted from the excel file.
 
 ASSUMPTIONS:
+
 1. The cycle time and MTTF follows normal distribution.
 2. If a machine breakdown midway through a process, the process is started from the beginning
 3. In case of a break down the MTTR is 6 hours with a standard deviation of 0.5 for all machines. 
 4. No defects are produced
 
 ABOUT THE MODEL:
+
 The model takes the number of components to be manufactured as its input and provides the time taken to manufacture for each of the components as the output.
 
 It does not give an accurate representation of the production lines due to the limited data available. Moreover adding in more factors increases the complexity of the model. 
