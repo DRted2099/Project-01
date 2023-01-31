@@ -1,4 +1,5 @@
 # Project-01
+
 This is simulation was run on MATLAB.
 
 Change the path of the .xslx file to the path saved on your computer when running the code. Make changes to lines that are commented with "Import the data"
@@ -15,3 +16,5 @@ The code simulates the production lines of 4 parts. It also plots bar graphs of 
 6. Number of breakdowns of each machine
 7. Reliability of the whole line (series reliability)
 8. Cost comparision of each workstation
+
+The last section of the script consists of custom functions that generates breakdown time, cycle time and set-uo time of each of the machines
