@@ -17,4 +17,4 @@ The code simulates the production lines of 4 parts. It also plots bar graphs of 
 7. Reliability of the whole line (series reliability)
 8. Cost comparision of each workstation
 
-The last section of the script consists of custom functions that generates breakdown time, cycle time and set-uo time of each of the machines
+The last section of the script consists of custom functions that generates breakdown time, cycle time and set-up time for each of the machines
