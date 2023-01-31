@@ -1,4 +1,4 @@
-# Project-01
+# Simulation of a manufactruring line
 
 This is simulation was run on MATLAB.
 
