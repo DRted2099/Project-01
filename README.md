@@ -7,14 +7,14 @@ The last section of the script consists of custom functions that generates break
 
 All the data used in the code is extracted from the excel file.
 
-ASSUMPTIONS:
+# ASSUMPTIONS:
 
 1. The cycle time and MTTF follows normal distribution.
 2. If a machine breakdown midway through a process, the process is started from the beginning
 3. In case of a break down the MTTR is 6 hours with a standard deviation of 0.5 for all machines. 
 4. No defects are produced
 
-ABOUT THE MODEL:
+# ABOUT THE MODEL:
 
 The model takes the number of components to be manufactured as its input and provides the time taken to manufacture for each of the components as the output.
 
@@ -32,4 +32,4 @@ The code simulates the production lines of 4 parts. It also plots bar graphs of 
 8. Cost comparision of each workstation
 
 
-THE RESULTS (PICS OF GRAPHS) ARE IN THE PDF FILE
+# THE RESULTS (PICS OF GRAPHS) ARE IN THE PDF FILE
