@@ -1,9 +1,12 @@
 # Simulation of manufactruring lines
 
-This is script was written in MATLAB.
+This script was written in MATLAB.
 
-Change the path of the .xslx file to the path saved on your computer when running the code. Make changes to lines that are commented with "Import the data"
+Change the path of the .xslx file to the path saved on your computer when running the code (ine #26, #47, #58). Make changes to lines that are commented with "Import the data"
+
 The last section of the script consists of custom functions that generates breakdown time, cycle time and set-up time for each of the machines which is REQUIRED to run the model
+
+All the information regarding the average run times, MTTF, set up times, cost of work center and the standard deviations are illustrated in 'SC Process Sequence GitHub.pdf'. The same data can be found in the excel file. 
 
 All the data used in the code is extracted from the excel file.
 
