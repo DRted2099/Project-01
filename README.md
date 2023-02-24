@@ -35,4 +35,4 @@ The code simulates the production lines of 4 parts. It also plots bar graphs of 
 8. Cost comparision of each workstation
 
 
-# The results (PICS OF GRAPHS) are in the pdf file Supply_ChainGitHub.pdf
+# The results (pictures of graphs and analysis) are in the pdf file Supply_ChainGitHub.pdf
